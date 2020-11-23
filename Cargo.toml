@@ -1,0 +1,17 @@
+[package]
+name = "random-tree"
+version = "0.1.0"
+authors = ["Sergey Kiselev <kiselev.sg@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bit-set = "0.5"
+criterion = "0.3"
+rand = "0.7"
+
+[[bench]]
+name = "bench"
+path = "src/bench.rs"
+harness = false
