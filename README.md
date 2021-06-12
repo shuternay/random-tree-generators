@@ -22,7 +22,7 @@ That algorithms takes a random mapping `f: [n] -> [n]` (or, equivalently, a dire
 
 These algorithms generate a random walk on a graph `K_n` and each time we visit a vertex for a first time, add corresponding edge to the tree [Bro89, Ald90]. It is easy to see that on average we need to do at least `Omega(n log n)` to visit all vertices. Still, with some tricks (like skipping steps inside of visited vertices) it is possible to implement that algorithm in a linear time.
 
-In [ISZ19, Section 5] there is an elegant equivalent reformulation, which gives the simplest and one of the fastest algorithms for tree generation.
+There is also an elegant equivalent reformulation [Ald90, Algorithm 2], which gives the simplest and one of the fastest algorithms for tree generation.
 
 Note that walk-based algorithms use twice as much entropy as previous algorithms.
 
@@ -36,7 +36,7 @@ To run benchmarks, run `cargo bench`. Below are results for `n = 10^6` on my lap
 - fast Prüfer decode [WWW09]: 34 ms
 - random mapping [H20]: 61 ms
 - random walk [Bro89, Ald90]: 80 ms
-- random walk reformulated [ISZ19]: 33 ms
+- random walk reformulated [Ald90, Algorithm 2]: 33 ms
 
 
 ## References
@@ -46,8 +46,6 @@ To run benchmarks, run `cargo bench`. Below are results for `n = 10^6` on my lap
 [Bro89] A. Broder, Generating random spanning trees, Proceedings of the 30th Annual Symposium on Foundations of Computer Science (USA), SFCS'89, IEEE Computer Society, p. 442-447, 1989.
 
 [H20] S. Heilman, Tree/Endofunction Bijections and Concentration Inequalities, preprint, arXiv:2006.06724, 2020.
-
-[ISZ19] M. Isaev, A. Southwell, and M. Zhukovskii, Distribution of tree parameters by martingale approach, preprint, arXiv:1912.09838, 2019.
 
 [PS07] T. Paulden, and D. K. Smith, Developing new locality results for the Prüfer Code using a remarkable linear-time decoding algorithm, The Electronic Journal of Combinatorics, R55-R55, 2007.
 

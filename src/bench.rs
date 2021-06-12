@@ -53,9 +53,10 @@ fn random_tree_walk(c: &mut Criterion) {
 }
 
 fn random_tree_walk_reformulated(c: &mut Criterion) {
-    c.bench_function("random walk reformulated [ISZ19], n=1000_000", |b| {
-        b.iter(|| sample_random_tree_walk_reformulated(1000_000))
-    });
+    c.bench_function(
+        "random walk reformulated [Ald90, Algorithm 2], n=1000_000",
+        |b| b.iter(|| sample_random_tree_walk_reformulated(1000_000)),
+    );
 }
 
 criterion_group!(

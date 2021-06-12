@@ -216,7 +216,7 @@ pub fn sample_random_tree_walk(n: usize) -> Vec<(usize, usize)> {
 }
 
 /// Generates a random tree using a reformulation of Aldous-Broder algorithm [Bro89, Ald90].
-/// from [ISZ19].
+/// from [Ald90, Algorithm 2].
 ///
 /// Complexity: O(n)
 pub fn sample_random_tree_walk_reformulated(n: usize) -> Vec<(usize, usize)> {
@@ -236,7 +236,7 @@ pub fn sample_random_tree_walk_reformulated(n: usize) -> Vec<(usize, usize)> {
     tree
 }
 
-/// For an oriented graph with out-degree 1 finds its loops and for each loop returns 
+/// For an oriented graph with out-degree 1 finds its loops and for each loop returns
 /// the minimal vertex and a vertex before it. This method is a part of Heilman algorithm [H20].
 ///
 /// Complexity: O(n)
